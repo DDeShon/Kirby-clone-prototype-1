@@ -13,7 +13,7 @@ async function gameSetup() {
             flame: { from: 36, to: 37, speed: 4, loop: true },
             guyIdle: 18,
             guyWalk: { from: 18, to: 19, speed: 4, loop: true },
-            bird: { from: 27, to: 28, speed: 4, loop: true },
+            bird: { from: 27, to: 28, speed: 4, loop: false },
         },
     });
 }
