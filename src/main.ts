@@ -22,7 +22,8 @@ async function gameSetup() {
     k.scene("level-1", () => {
         k.setGravity(2100);
         k.add([
-            
+            k.rect(k.width(), k.height()),
+            k.color(k.Color.fromHex("#f7d7db"))
         ])
     })
     
