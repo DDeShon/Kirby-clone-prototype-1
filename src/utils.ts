@@ -15,8 +15,8 @@ export async function makeMap(k: KaboomCtx, name: string) {
                     k.area({
                         shape: new k.Rect(k.vec2(0), collider.width, collider.height),
                         collisionIgnore: ["platform", "exit"],
-                    })
-                    collider.name !== "exit" : k.body({isStatic: true})
+                    }),
+                    collider.name !== "exit" ? k.body({isStatic: true}) : null,
                 ])
             }
         }
