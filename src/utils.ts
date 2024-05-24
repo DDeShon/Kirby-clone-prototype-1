@@ -13,7 +13,8 @@ export async function makeMap(k: KaboomCtx, name: string) {
             for (const collider of layer.objects) {
                 map.add([
                     k.area({
-                        shape: new k.Rect(k.vec2(0), collider.width, collider.height)
+                        shape: new k.Rect(k.vec2(0), collider.width, collider.height),
+                        collisionIgnore: ["platform", "exit"],
                     })
                 ])
             }
