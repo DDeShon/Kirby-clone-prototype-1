@@ -19,8 +19,9 @@ export async function makeMap(k: KaboomCtx, name: string) {
                     collider.name !== "exit" ? k.body({isStatic: true}) : null,
                     k.pos(collider.x, collider.y),
                     collider.name !== "exit" ? "platform" : "exit"
-                ])
-            }
+                ]);
+            };
+            continue;
         }
     }
 }
