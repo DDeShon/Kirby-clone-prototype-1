@@ -38,4 +38,6 @@ export async function makeMap(k: KaboomCtx, name: string) {
             }
         }
     }
+
+    return {map, spawnPoints};
 }
