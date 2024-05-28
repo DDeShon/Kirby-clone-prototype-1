@@ -31,7 +31,7 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
 
         if (player.hp() === 0) {
             k.destroy(player);
-            k.go(globalGameState.currentScene);
+            k.go("level-2");
             return;
         }
     })
