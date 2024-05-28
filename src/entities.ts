@@ -28,5 +28,11 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
             player.isFull = true;
             return;
         }
+
+        if (player.hp() === 0) {
+            k.destroy(player);
+            k.go(globalGameState.currentScene);
+            return;
+        }
     })
 }
