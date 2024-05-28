@@ -43,6 +43,12 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
             (val) => (player.opacity = val),
             k.easings.linear
         );
-        
+        await k.tween(
+            player.opacity,
+            1,
+            0.05,
+            (val) => (player.opacity = val),
+            k.easings.linear
+        )
     })
 }
