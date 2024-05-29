@@ -56,5 +56,11 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
         k.go("level-2");
     });
 
-    
+    const inhaleEffect = k.add([
+        k.sprite("assets", { anim: "kirbInhaleEffect" }),
+        k.pos(),
+        k.scale(scale),
+        k.opacity(0),
+        "inhaleEffect",
+    ]);
 }
