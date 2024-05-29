@@ -49,6 +49,12 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
             0.05,
             (val) => (player.opacity = val),
             k.easings.linear
-        )
-    })
+        );
+    });
+
+    player.onCollide("exit", () => {
+        k.go("level-2");
+    });
+
+    
 }
