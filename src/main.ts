@@ -1,3 +1,4 @@
+import { makePlayer } from "./entities.ts";
 import { k } from "./kaboomCtx.ts";
 import { makeMap } from "./utils.ts";
 
@@ -31,7 +32,13 @@ async function gameSetup() {
         ]);
 
         k.add(level1Layout);
-    })
+
+        const kirb = makePlayer(
+            k,
+            level1SpawnPoints.player[0].x,
+            level1SpawnPoints.player[0].y,
+        );
+    });
     
     k.go("level-1");
 }
