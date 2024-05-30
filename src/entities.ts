@@ -88,5 +88,5 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
         }
     });
 
-    
+    return player;
 }
