@@ -38,6 +38,8 @@ async function gameSetup() {
             level1SpawnPoints.player[0].x,
             level1SpawnPoints.player[0].y,
         );
+
+        k.add(kirb);
     });
     
     k.go("level-1");
