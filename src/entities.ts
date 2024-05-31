@@ -1,9 +1,21 @@
-import { GameObj, KaboomCtx } from "kaboom";
+import { AreaComp, BodyComp, DoubleJumpComp, GameObj, HealthComp, KaboomCtx, OpacityComp, PosComp, ScaleComp, SpriteComp } from "kaboom";
 import { scale } from "./constants";
 
-type PlayerGameObj = {
-    
-}
+type PlayerGameObj = GameObj<
+    SpriteComp &
+    AreaComp &
+    BodyComp &
+    PosComp &
+    ScaleComp &
+    DoubleJumpComp &
+    HealthComp &
+    OpacityComp & {
+        speed: number;
+        direction: string;
+        isInhaling: boolean;
+        isFull: boolean;
+    }
+>;
 
 export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
     const player = k.make([
