@@ -1,0 +1,26 @@
+{
+    "activeFile": "level-1.json",
+    "fileStates": {
+        "kirby-like.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "level-1.json": {
+            "scale": 5.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 317.4545454545455,
+                "y": 236.72727272727275
+            }
+        }
+    },
+    "openFiles": [
+        "level-1.json",
+        "kirby-like.tsx"
+    ],
+    "recentFiles": [
+        "kirby-like.tsx",
+        "level-1.json"
+    ]
+}
