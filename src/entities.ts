@@ -1,6 +1,9 @@
 import { GameObj, KaboomCtx } from "kaboom";
 import { scale } from "./constants";
 
+type PlayerGameObj = {
+    
+}
 
 export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
     const player = k.make([
@@ -90,3 +93,5 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
 
     return player;
 }
+
+export function setControls(k: KaboomCtx, player: GameObj)
