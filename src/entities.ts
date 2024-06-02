@@ -106,4 +106,4 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
     return player;
 }
 
-export function setControls(k: KaboomCtx, player: GameObj)
+export function setControls(k: KaboomCtx, player: PlayerGameObj)
