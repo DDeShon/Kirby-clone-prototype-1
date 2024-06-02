@@ -106,4 +106,13 @@ export function makePlayer(k: KaboomCtx, posX: number, posY: number) {
     return player;
 }
 
-export function setControls(k: KaboomCtx, player: PlayerGameObj)
+export function setControls(k: KaboomCtx, player: PlayerGameObj) {
+    const inhaleEffectRef = k.get("inhaleEffect")[0]
+
+    k.onKeyDown((key) => {
+        switch (key) {
+            case "left":
+                player.direction = "left";
+        }
+    })
+}
