@@ -116,11 +116,13 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 player.flipX = true;
                 player.move(-player.speed, 0);
                 break;
+            
             case "right":
                 player.direction = "right";
                 player.flipX = false;
                 player.move(player.speed, 0);
                 break;
+            
             case "z":
                 if (player.isFull) {
                     player.play("kirbFull");
@@ -130,6 +132,9 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 player.isInhaling = true;
                 player.play("kirbInhaling");
                 inhaleEffectRef.opacity = 1;
+                break;
+            
+            default:
         }
     })
 }
