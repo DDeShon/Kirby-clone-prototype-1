@@ -115,6 +115,13 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 player.direction = "left";
                 player.flipX = true;
                 player.move(-player.speed, 0);
+                break;
+            case "right":
+                player.direction = "right";
+                player.flipX = false;
+                player.move(player.speed, 0);
+                break;
+                
         }
     })
 }
