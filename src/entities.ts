@@ -127,6 +127,9 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                     inhaleEffectRef.opacity = 0;
                     break;
                 }
+                player.isInhaling = true;
+                player.play("kirbInhaling");
+                inhaleEffectRef.opacity = 1;
         }
     })
 }
