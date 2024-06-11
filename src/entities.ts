@@ -114,7 +114,7 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
             case "left":
                 player.direction = "left";
                 player.flipX = true;
-                player.move(player.speed, 0);
+                player.move(-player.speed, 0);
         }
     })
 }
