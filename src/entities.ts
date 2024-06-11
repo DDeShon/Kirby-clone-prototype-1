@@ -121,7 +121,12 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 player.flipX = false;
                 player.move(player.speed, 0);
                 break;
-                
+            case "z":
+                if (player.isFull) {
+                    player.play("kirbFull");
+                    inhaleEffectRef.opacity = 0;
+                    break;
+                }
         }
     })
 }
