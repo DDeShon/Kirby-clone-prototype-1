@@ -1,4 +1,4 @@
-import { makePlayer } from "./entities.ts";
+import { makePlayer, setControls } from "./entities.ts";
 import { k } from "./kaboomCtx.ts";
 import { makeMap } from "./utils.ts";
 
@@ -39,6 +39,7 @@ async function gameSetup() {
             level1SpawnPoints.player[0].y,
         );
 
+        setControls(k, kirb);
         k.add(kirb);
         k.camScale(0.7, 0.7);
         k.onUpdate(() => {
