@@ -139,12 +139,14 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
     })
 
     k.onKeyPress((key) => {
-        switch (key) {
-            case "space":
-                player.doubleJump();
-                break;
-            
-            default:
+        if (key === "space") player.doubleJump();
+    })
+
+    k.onKeyRelease((key) => {
+        if (key === "z") {
+            if (player.isFull) {
+                player.play("kirbInhaling")
+            }
         }
     })
 }
