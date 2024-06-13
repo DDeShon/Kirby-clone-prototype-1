@@ -145,7 +145,13 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
     k.onKeyRelease((key) => {
         if (key === "z") {
             if (player.isFull) {
-                player.play("kirbInhaling")
+                player.play("kirbInhaling");
+                const shootingStar = k.add([
+                    k.sprite("assets", {
+                        anim: "shootingStar",
+                        flipX: player.direction === "right",
+                    }),
+                ])
             }
         }
     })
