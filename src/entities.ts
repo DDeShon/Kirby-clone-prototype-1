@@ -154,7 +154,7 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                     k.area({shape: new k.Rect(k.vec2(5, 4), 6, 6) }),
                     k.pos(
                         player.direction === "left" ? player.pos.x - 80 : player.pos.x + 80,
-                        player.pos.y + 5
+                        player.pos.y + 6
                     )
                 ])
             }
