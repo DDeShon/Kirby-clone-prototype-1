@@ -162,6 +162,7 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                         : k.move (k.RIGHT, 800),
                     "shootingStar",
                 ]);
+                shootingStar.onCollide("platform", () => k.destroy(shootingStar));
             }
         }
     })
