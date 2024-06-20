@@ -163,6 +163,8 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                     "shootingStar",
                 ]);
                 shootingStar.onCollide("platform", () => k.destroy(shootingStar));
+
+                player.isFull = false;
             }
         }
     })
