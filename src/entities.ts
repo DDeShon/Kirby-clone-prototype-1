@@ -165,6 +165,7 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 shootingStar.onCollide("platform", () => k.destroy(shootingStar));
 
                 player.isFull = false;
+                k.wait(1, () => player.play("kirbIdle"));
             }
         }
     })
