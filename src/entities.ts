@@ -167,6 +167,8 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
                 player.isFull = false;
                 k.wait(1, () => player.play("kirbIdle"));
             }
+
+            inhaleEffectRef.opacity = 0;
         }
     })
 }
