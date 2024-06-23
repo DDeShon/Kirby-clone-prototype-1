@@ -169,6 +169,8 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
             }
 
             inhaleEffectRef.opacity = 0;
+            player.isInhaling = false;
+            player.play("kirbIdle");
         }
     })
 }
