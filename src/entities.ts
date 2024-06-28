@@ -175,4 +175,14 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
     });
 }
 
-export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {}
+export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
+    const flame = k.add([
+        k.sprite("assets", { anim: "flame" }),
+        k.scale(scale),
+        k.pos(posX * scale, posY * scale),
+        k.area({
+            shape: new k.Rect(k.vec2(4, 6), 8, 10),
+            collisionIgnore: ["enemy"],
+        }),
+    ])
+}
