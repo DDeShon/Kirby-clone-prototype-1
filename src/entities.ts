@@ -184,5 +184,7 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
             shape: new k.Rect(k.vec2(4, 6), 8, 10),
             collisionIgnore: ["enemy"],
         }),
+        k.body(),
+        k.state("idle", ["idle", "jump"]),
     ])
 }
