@@ -186,5 +186,6 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
         }),
         k.body(),
         k.state("idle", ["idle", "jump"]),
+        "enemy",
     ])
 }
