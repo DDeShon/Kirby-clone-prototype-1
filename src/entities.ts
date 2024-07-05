@@ -199,4 +199,10 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
     flame.onStateEnter("jump", async () => {
         flame.jump(1000);
     });
+
+    flame.onStateUpdate("jump", async () => {
+        if (flame.isGrounded()) {
+            flame.enterState("idle");
+        }
+    });
 }
