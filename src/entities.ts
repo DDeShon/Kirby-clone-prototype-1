@@ -205,4 +205,6 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
             flame.enterState("idle");
         }
     });
+
+    return flame;
 }
