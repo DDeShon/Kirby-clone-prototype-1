@@ -189,7 +189,7 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
         "enemy",
     ]);
 
-    // makeInhalable(k, flame);
+    makeInhalable(k, flame);
 
     flame.onStateEnter("idle", async () => {
         await k.wait(1);
