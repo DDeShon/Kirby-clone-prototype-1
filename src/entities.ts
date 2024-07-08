@@ -175,6 +175,12 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
     });
 }
 
+export function makeInhalable(k: KaboomCtx, enemy: GameObj) {
+    enemy.onCollide("inhaleZone", () => {
+        enemy.isInhalable = true;
+    });
+}
+
 export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
     const flame = k.add([
         k.sprite("assets", { anim: "flame" }),
