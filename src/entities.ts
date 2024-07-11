@@ -184,7 +184,10 @@ export function makeInhalable(k: KaboomCtx, enemy: GameObj) {
         enemy.isInhalable = false;
     });
 
-    enemy.onCollide("shootingStar", (shootingStar: GameObj) => {})
+    enemy.onCollide("shootingStar", (shootingStar: GameObj) => {
+        k.destroy(enemy);
+        k.destroy(shootingStar);
+    })
 }
 
 export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
