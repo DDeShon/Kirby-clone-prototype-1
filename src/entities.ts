@@ -188,6 +188,8 @@ export function makeInhalable(k: KaboomCtx, enemy: GameObj) {
         k.destroy(enemy);
         k.destroy(shootingStar);
     });
+
+    const playerRef = k.get("player")[0];
 }
 
 export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
