@@ -190,6 +190,9 @@ export function makeInhalable(k: KaboomCtx, enemy: GameObj) {
     });
 
     const playerRef = k.get("player")[0];
+    enemy.onUpdate(() => {
+        if (playerRef.isInhaling && enemy.isInhalable) {}
+    })
 }
 
 export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
