@@ -193,7 +193,7 @@ export function makeInhalable(k: KaboomCtx, enemy: GameObj) {
     enemy.onUpdate(() => {
         if (playerRef.isInhaling && enemy.isInhalable) {
             if (playerRef.direction === "right") {
-                
+                enemy.move(-800, 0);
             }
         }
     });
