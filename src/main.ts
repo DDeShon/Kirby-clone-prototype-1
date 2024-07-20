@@ -1,4 +1,4 @@
-import { makePlayer, setControls } from "./entities.ts";
+import { makeFlameEnemy, makePlayer, setControls } from "./entities.ts";
 import { k } from "./kaboomCtx.ts";
 import { makeMap } from "./utils.ts";
 
@@ -46,6 +46,10 @@ async function gameSetup() {
             if (kirb.pos.x < level1Layout.pos.x + 432)
                 k.camPos(kirb.pos.x + 500, 870);
         });
+
+        for (const flame of level1SpawnPoints.flame) {
+            makeFlameEnemy(k, flame.x, flame.y);
+        }
     });
     
     k.go("level-1");
