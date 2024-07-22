@@ -49,7 +49,7 @@ async function gameSetup() {
 
         for (const flame of level1SpawnPoints.flame) {
             makeFlameEnemy(k, flame.x, flame.y);
-        }
+        };
     });
     
     k.go("level-1");
