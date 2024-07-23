@@ -234,3 +234,7 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
 
     return flame;
 }
+
+export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
+    const guy = k.add([])
+}
