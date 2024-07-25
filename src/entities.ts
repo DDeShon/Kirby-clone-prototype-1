@@ -237,6 +237,8 @@ export function makeFlameEnemy(k: KaboomCtx, posX: number, posY: number) {
 
 export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
     const guy = k.add([
-
+        k.sprite("assets", { anim: "guyWalk" }),
+        k.scale(scale),
+        k.pos(posX * scale, posY * scale),
     ]);
 }
