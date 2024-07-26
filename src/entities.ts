@@ -242,6 +242,8 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
         k.pos(posX * scale, posY * scale),
         k.area({
             shape: new k.Rect(k.vec2(2, 3.9), 12, 12),
-        })
+            collisionIgnore: ["enemy"],
+        }),
+        k.body(),
     ]);
 }
