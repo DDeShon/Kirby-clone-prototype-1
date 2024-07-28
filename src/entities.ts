@@ -245,6 +245,6 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
             collisionIgnore: ["enemy"],
         }),
         k.body(),
-        k.state
+        k.state("idle", ["idle", "left", "right", "jump"]),
     ]);
 }
