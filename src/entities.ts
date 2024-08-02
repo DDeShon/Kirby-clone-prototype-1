@@ -248,6 +248,7 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
         k.state("idle", ["idle", "left", "right", "jump"]),
         { isInhalable: false, speed: 100 },
         "enemy",
-        enemy
     ]);
+
+    makeInhalable(k, guy);
 }
