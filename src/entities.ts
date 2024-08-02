@@ -251,4 +251,9 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
     ]);
 
     makeInhalable(k, guy);
+
+    guy.onStateEnter("idle", async () => {
+        await k.wait(1);
+        guy.enterState("left");
+    });
 }
