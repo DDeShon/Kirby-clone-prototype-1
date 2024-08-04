@@ -256,4 +256,6 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
         await k.wait(1);
         guy.enterState("left");
     });
+
+    guy onStateEnter("left", async() => {})
 }
