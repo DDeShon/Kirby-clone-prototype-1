@@ -258,6 +258,6 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
     });
 
     guy onStateEnter("left", async() => {
-        guy flinX = false;
+        guy.flinX = false;
     });
 }
