@@ -263,13 +263,17 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
         guy.enterState("right");
     });
 
-    guy.onStateUpdate("left"), () => {
+    guy.onStateUpdate("left", () => {
         guy.move(-guy.speed, 0);
-    };
+    });
 
     guy.onStateEnter("right", async() => {
         guy.flipX = true;
         await k.wait(2);
         guy.enterState("left");
+    });
+
+    guy.onStateUpdate("right", () => {
+        guy.move(guy.speed, 0);
     });
 }
