@@ -1,4 +1,4 @@
-import { makeFlameEnemy, makePlayer, setControls } from "./entities.ts";
+import { makeFlameEnemy, makeGuyEnemy, makePlayer, setControls } from "./entities.ts";
 import { k } from "./kaboomCtx.ts";
 import { makeMap } from "./utils.ts";
 
@@ -49,6 +49,10 @@ async function gameSetup() {
 
         for (const flame of level1SpawnPoints.flame) {
             makeFlameEnemy(k, flame.x, flame.y);
+        };
+
+        for (const guy of level1SpawnPoints.guy) {
+            makeGuyEnemy(k, guy.x, guy.y);
         };
     });
     
