@@ -276,4 +276,6 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
     guy.onStateUpdate("right", () => {
         guy.move(guy.speed, 0);
     });
+
+    return guy;
 }
