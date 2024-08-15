@@ -279,3 +279,10 @@ export function makeGuyEnemy(k: KaboomCtx, posX: number, posY: number) {
 
     return guy;
 }
+
+export function makeBirdEnemy(
+    k: KaboomCtx,
+    posX: number,
+    posY: number,
+    speed: number
+) {}
