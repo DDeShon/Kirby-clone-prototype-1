@@ -285,4 +285,8 @@ export function makeBirdEnemy(
     posX: number,
     posY: number,
     speed: number
-) {}
+) {
+    const bird = k.add([
+        k.sprite("assets", { anim: "bird" }),
+    ])
+}
