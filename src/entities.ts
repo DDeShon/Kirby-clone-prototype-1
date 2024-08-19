@@ -296,5 +296,6 @@ export function makeBirdEnemy(
         }),
         k.body({ isStatic: true }),
         k.move(k.LEFT, speed),
+        k.offscreen({ destroy: true, distance: 400 }),
     ]);
 }
