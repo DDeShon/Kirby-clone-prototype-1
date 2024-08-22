@@ -1,4 +1,4 @@
-import { makeFlameEnemy, makeGuyEnemy, makePlayer, setControls } from "./entities.ts";
+import { makeBirdEnemy, makeFlameEnemy, makeGuyEnemy, makePlayer, setControls } from "./entities.ts";
 import { k } from "./kaboomCtx.ts";
 import { makeMap } from "./utils.ts";
 
@@ -53,6 +53,10 @@ async function gameSetup() {
 
         for (const guy of level1SpawnPoints.guy) {
             makeGuyEnemy(k, guy.x, guy.y);
+        };
+
+        for (const bird of level1SpawnPoints.bird) {
+            makeBirdEnemy(k, bird.x, bird.y);
         };
     });
     
